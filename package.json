@@ -1,0 +1,14 @@
+{
+  "name": "bingo",
+  "version": "1.0.0",
+  "description": "Application for the DOJ's Kick-off party",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ian Brison",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^2.0.7"
+  }
+}

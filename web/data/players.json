@@ -1,0 +1,26 @@
+playersJsonArray = [
+    {
+        "name": "イアン",
+        "hasImage": true,
+        "introductionType": 1,
+        "introduction": "外国人じゃありません"
+    },
+    {
+        "name": "aaa",
+        "hasImage": true,
+        "introductionType": 1,
+        "introduction": "外国人じゃありません"
+    },
+    {
+        "name": "bbb",
+        "hasImage": true,
+        "introductionType": 1,
+        "introduction": "外国人じゃありません"
+    },
+    {
+        "name": "ccc",
+        "hasImage": true,
+        "introductionType": 1,
+        "introduction": "外国人じゃありません"
+    }
+];
