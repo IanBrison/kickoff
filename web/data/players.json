@@ -1,26 +1,74 @@
 playersJsonArray = [
     {
+        "index": 0,
         "name": "イアン",
         "hasImage": true,
-        "introductionType": 1,
-        "introduction": "外国人じゃありません"
+        "imgUrl": "0.png",
+        "introductionType": 0,
+        "introduction": [
+            "外国人じゃありません",
+            "ああああああああ",
+            "いいいいいいいい"
+        ]
     },
     {
+        "index": 1,
         "name": "aaa",
         "hasImage": true,
-        "introductionType": 1,
-        "introduction": "外国人じゃありません"
+        "imgUrl": "1.png",
+        "introductionType": 0,
+        "introduction": [
+            "外国人じゃありません",
+            "ああああああああ",
+            "いいいいいいいい"
+        ]
     },
     {
+        "index": 2,
         "name": "bbb",
         "hasImage": true,
+        "imgUrl": "2.png",
         "introductionType": 1,
-        "introduction": "外国人じゃありません"
+        "introduction": [
+            "外国人じゃありません",
+            "ああああああああ",
+            "いいいいいいいい"
+        ]
     },
     {
+        "index": 3,
         "name": "ccc",
         "hasImage": true,
-        "introductionType": 1,
-        "introduction": "外国人じゃありません"
+        "imgUrl": "3.png",
+        "introductionType": 2,
+        "introduction": [
+            "外国人じゃありません",
+            "ああああああああ",
+            "いいいいいいいい"
+        ]
+    },
+    {
+        "index": 4,
+        "name": "名無し1号",
+        "hasImage": false,
+        "imgUrl": "no.png",
+        "introductionType": 0,
+        "introduction": [
+            "外国人じゃありません",
+            "ああああああああ",
+            "いいいいいいいい"
+        ]
+    },
+    {
+        "index": 5,
+        "name": "名無し2号",
+        "hasImage": false,
+        "imgUrl": "no.png",
+        "introductionType": 2,
+        "introduction": [
+            "外国人じゃありません",
+            "ああああああああ",
+            "いいいいいいいい"
+        ]
     }
 ];

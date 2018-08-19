@@ -8,29 +8,31 @@
 		<link rel="stylesheet" href="css/bingo.css"></link>
 	</head>
 	<body>
-		<div class="container row">
+		<div class="row">
 			<div class="title_container">
                 <h3>これテストな</h3>
 			</div>
-			<div class="roulette_container col s8 offset-s2 row">
-				<div class="roulette col s6" style="display:none;">
-				</div>
-                <div class="nameSpinner col s6">
-                    <h4 id="name"> 名前</h2>
+            <div class="col s3">
+                <h4>当たった人たち</h4>
+                <div id="finished_list">
                 </div>
+            </div>
+			<div class="roulette_container col s9 row">
+				<div class="roulette" style="display:none;">
+				</div>
+			    <div class="btn_container col s4 offset-s2">
+				    <p>
+					    <button class="start waves-effect waves-light btn-large red darken-2"> START </button>
+					    <button class="stop waves-effect waves-light btn-large red darken-2"> STOP </button>
+				    </p>
+			    </div>
 			</div>
-			<div class="btn_container col s4 offset-s4">
-				<p>
-					<button class="start waves-effect waves-light btn-large red darken-2"> START </button>
-					<button class="stop waves-effect waves-light btn-large red darken-2"> STOP </button>
-				</p>
-			</div>		
 		</div>
 
 		<script src="static/js/jquery.min.js"></script>
 		<script src="static/js/jquery-ui.min.js"></script>
 		<script src="static/js/materialize.min.js"></script>
-		<script src="static/js/roulette.js"></script>
+		<script src="js/roulette.js"></script>
 		<script src="data/players.json"></script>
 		<script src="js/bingo.js"></script>
 	</body>
