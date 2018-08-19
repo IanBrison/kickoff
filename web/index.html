@@ -21,13 +21,23 @@
 				<div class="roulette" style="display:none;">
 				</div>
 			    <div class="btn_container col s4 offset-s2">
+				    <p id="player_introduction_type">
+				    </p>
+				    <p id="player_introduction">
+				    </p>
 				    <p>
-					    <button class="start waves-effect waves-light btn-large red darken-2"> START </button>
-					    <button class="stop waves-effect waves-light btn-large red darken-2"> STOP </button>
+                        EnterKeyでスタート。SpaceKeyでストップ（押さなくてもストップはする）
 				    </p>
 			    </div>
 			</div>
 		</div>
+
+        <audio id="pipipi" preload="auto">
+            <source src="sound/pi.mp3" type="audio/mp3">
+        </audio>
+        <audio id="piroon" preload="auto">
+            <source src="sound/piroon.mp3" type="audio/mp3">
+        </audio>
 
 		<script src="static/js/jquery.min.js"></script>
 		<script src="static/js/jquery-ui.min.js"></script>

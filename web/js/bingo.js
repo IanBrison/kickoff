@@ -73,6 +73,24 @@ jQuery(function(){
         }
     }
 
+    var pipipi = $('#pipipi')[0];
+    pipipi.loop = true;
+    var piroon = $('#piroon')[0];
+    piroon.loop = false;
+
+    var playerIntroductionTypeArray = [
+        '私、実は...',
+        'もし地球最後の日だったら...',
+        '活性するなら...'
+    ];
+    var playerIntroductionTypeP = $('#player_introduction_type');
+    var playerIntroductionP = $('#player_introduction');
+    var showIntroduction = function () {
+        playerIntroductionTypeP.html(playerIntroductionTypeArray[players[nextPlayerNum].introductionType]);
+        playerIntroductionP.html(players[nextPlayerNum].introduction[players[nextPlayerNum].introductionType]);
+        next_is_stop = true;
+    }
+
     // ルーレットの設定
     var option = {
         speed : 10,
@@ -87,25 +105,48 @@ jQuery(function(){
             }
             console.log('left');
             console.log(leftPlayerNums);
+            pipipi.play();
+            playerIntroductionTypeP.html('');
+            playerIntroductionP.html('');
         },
         slowDownCallback: function() {
+            if (!next_is_stop) {
+                showIntroduction();
+            }
         },
         stopCallback: function() {
             finishedPlayers.push(players[nextPlayerNum]);
             console.log('fin');
             console.log(finishedPlayers);
             renderLatestFinishedPlayers();
+            pressed_start = false;
+            next_is_stop = false;
+            pipipi.pause();
+            piroon.play();
         }
     }
     $('div.roulette').roulette(option);
 
-    // START!
-    $('.start').click(function(){
-        $('div.roulette').roulette('start');
+    var pressed_start = false;
+    var next_is_stop = false;
+
+    // START! EnterKey
+    $(window).keyup(function(e){
+        if (e.keyCode == 13 && !pressed_start) {
+            $('div.roulette').roulette('start');
+            pressed_start = true;
+        }
     });
 
-    // STOP!
-    $('.stop').click(function(){
-        $('div.roulette').roulette('stop');
+    // STOP! SpaceKey
+    $(window).keyup(function(e){
+        if (e.keyCode == 32 && pressed_start) {
+            if (next_is_stop) {
+                $('div.roulette').roulette('stop');
+            } else {
+                showIntroduction();
+            }
+        }
     });
+
 });
