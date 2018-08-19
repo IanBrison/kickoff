@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOJ BINGO</title>
+		<link rel="stylesheet" href="static/css/jquery-ui.css">
+		<link rel="stylesheet" href="static/css/materialize.min.css">
+	</head>
+	<body style="background-image: url('img/casino.jpg'); background-size: cover;">
+        <div style="padding-top: 300px;">
+            <h1 style="color: red; text-align: center;">DOJ BINGO!!</h1>
+        </div>
+
+        <audio id="casino" preload="auto">
+            <source src="sound/casino.mp3" type="audio/mp3">
+        </audio>
+        <audio id="next_button" preload="auto">
+            <source src="sound/nextButton.mp3" type="audio/mp3">
+        </audio>
+
+		<script src="static/js/jquery.min.js"></script>
+		<script src="static/js/jquery-ui.min.js"></script>
+		<script src="static/js/materialize.min.js"></script>
+		<script>
+            var casino = $('#casino')[0];
+            casino.loop = true;
+            casino.play();
+            var nextButton = $('#next_button')[0];
+            nextButton.loop = false;
+
+            // START! Any Key
+            $(window).keyup(function(e){
+                casino.pause();
+                nextButton.addEventListener('ended', function() {
+                    document.location.href = 'index.html';
+                });
+                nextButton.play();
+            });
+        </script>
+	</body>
+</html>
