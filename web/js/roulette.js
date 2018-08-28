@@ -107,7 +107,7 @@
 			if (!p.$images) {
 				p.$images = $roulette.find('.targets').remove();
 				p.imageCount = p.$images.length;
-				p.imageHeight = 133;
+				p.imageHeight = $(window).height() * 0.25;
 				//p.imageHeight = p.$images.eq(0).height();
 				$roulette.css({ 'height' : (p.imageHeight + 'px') });
 				p.totalHeight = p.imageCount * p.imageHeight;

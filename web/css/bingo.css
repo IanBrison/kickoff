@@ -1,3 +1,70 @@
-.title_container {
-    margin: 50px;
+#finished_list_area {
+    background-color: brown;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.list_item {
+    background-color: white;
+    color: black;
+}
+
+.list_item_img {
+    padding: 0px;
+}
+
+.list_item_name {
+    padding: 0px;
+}
+
+#roulette_black_box {
+    background-color: black;
+    border-radius: 10px;
+    height: 30vh;
+}
+
+#roulette_white_box {
+    background-color: white;
+    margin: 2%;
+    box-shadow: 0 0 20px inset;
+    border-radius: 10px;
+    height: 25vh;
+    margin: 2.5vh;
+}
+
+.targets {
+    height: 25vh;
+}
+
+.target_img_div {
+    height: 25vh;
+    float: left;
+    width: 25vh;
+    text-align: center;
+}
+
+.target_img {
+    height: 23vh;
+    margin: 1vh;
+}
+
+.target_name_div {
+    float: left;
+    height: 25vh;
+    padding: 3vh;
+}
+
+.target_name_1 {
+    font-size: 4vh;
+    height: 8vh;
+}
+
+.target_name_2 {
+    font-size: 2vh;
+    height: 1vh;
+}
+
+.target_name_3 {
+    font-size: 8vh;
 }

@@ -6,24 +6,28 @@ jQuery(function(){
         if (!player.hasImage) {
             noImgPlayerIndex = player.index;
             $('div.roulette').append(
-                '<div class="targets row" style="margin-bottom:0px">' +
-                    '<div class="col s6">' +
-                        '<img id="no_img_player_img" src="img/no.png"/>' +
+                '<div class="targets roulette_item">' +
+                    '<div class="target_img_div">' +
+                        '<img class="target_img" id="no_img_player_img" src="img/no.png"/>' +
                     '</div>' +
-                    '<div class="col s6">' +
-                        '<span id="no_img_player_name">誰でしょう</span>' +
+                    '<div class="target_name_div">' +
+                        '<div class="target_name_1">' + player.name + '</div>' +
+                        '<div class="target_name_2">' + player.name + '</div>' +
+                        '<div class="target_name_3">' + player.name + '</div>' +
                     '</div>' +
                 '</div>'
             );
             return true;
         }
         $('div.roulette').append(
-            '<div class="targets row" style="margin-bottom:0px">' +
-                '<div class="col s6">' +
-                    '<img src="img/' + player.imgUrl + '"/>' +
+            '<div class="targets roulette_item">' +
+                '<div class="target_img_div">' +
+                    '<img class="target_img" src="img/' + player.imgUrl + '"/>' +
                 '</div>' +
-                '<div class="col s6">' +
-                    '<span>' + player.name + '</span>' +
+                '<div class="target_name_div">' +
+                    '<div class="target_name_1">' + player.name + '</div>' +
+                    '<div class="target_name_2">' + player.name + '</div>' +
+                    '<div class="target_name_3">' + player.name + '</div>' +
                 '</div>' +
             '</div>'
         );
@@ -61,11 +65,11 @@ jQuery(function(){
         if (start < 0) start = 0;
         for (n = start; n < finishedPlayers.length; n++) {
             finishedListDiv.append(
-                '<div class="list_item row" style="margin-bottom:0px">' +
-                    '<div class="col s6">' +
-                        '<img src="img/' + finishedPlayers[n].imgUrl + '" width="50%" height="50%"/>' +
+                '<div class="list_item row">' +
+                    '<div class="list_item_img col s3">' +
+                        '<img src="img/' + finishedPlayers[n].imgUrl + '" width="100%"/>' +
                     '</div>' +
-                    '<div class="col s6">' +
+                    '<div class="list_item_name col s9">' +
                         '<span>' + finishedPlayers[n].name + '</span>' +
                     '</div>' +
                 '</div>'

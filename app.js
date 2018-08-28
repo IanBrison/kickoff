@@ -12,8 +12,8 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
 
   // ブラウザ(Chromium)の起動, 初期画面のロード
-  mainWindow = new BrowserWindow({width: 1600, height: 1200});
-  mainWindow.loadURL('file://' + __dirname + '/web/start.html');
+  mainWindow = new BrowserWindow({width: 1600, height: 900});
+  mainWindow.loadURL('file://' + __dirname + '/web/index.html');
 
   mainWindow.on('closed', function() {
     mainWindow = null;

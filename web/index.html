@@ -8,27 +8,28 @@
 		<link rel="stylesheet" href="css/bingo.css"></link>
 	</head>
 	<body>
-		<div class="row">
-			<div class="title_container">
-                <h3>これテストな</h3>
-			</div>
-            <div class="col s3">
+		<div class="row" style="margin: 0px">
+            <div id="finished_list_area" class="col s3">
                 <h4>当たった人たち</h4>
-                <div id="finished_list">
+                <div id="finished_list" class="col s12">
                 </div>
             </div>
-			<div class="roulette_container col s9 row">
-				<div class="roulette" style="display:none;">
+			<div id="roulette_container" class="col s9 row">
+                <div style="text-align: right">
+                    <h1>DOJビンゴ</h1>
+                </div>
+				<div id="roulette_black_box" class="col s10 offset-s1 row">
+				    <div id="roulette_white_box" class="col s10">
+				        <div class="roulette" style="display:none;">
+                        </div>
+                    </div>
+                    <div class="col s2">
+                    </div>
 				</div>
-			    <div class="btn_container col s4 offset-s2">
-				    <p id="player_introduction_type">
-				    </p>
-				    <p id="player_introduction">
-				    </p>
-				    <p>
-                        EnterKeyでスタート。SpaceKeyでストップ（押さなくてもストップはする）
-				    </p>
-			    </div>
+				<p id="player_introduction_type">
+				</p>
+				<p id="player_introduction">
+				</p>
 			</div>
 		</div>
 
